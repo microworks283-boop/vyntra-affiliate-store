@@ -1,0 +1,1 @@
+Starter project provided for customization. Third-party product photographs loaded from Unsplash are external demo assets; review each asset's current license/terms before use in a commercial launch. Retailer names and trademarks belong to their respective owners.
