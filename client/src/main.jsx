@@ -61,8 +61,15 @@ function App() {
   return <div className="app-shell">
     <div className="announcement"><Sparkles size={14}/> Your next great find is closer than you think <span className="announce-dot">✦</span> Curated across stores</div>
     <header className="header">
-      <a className="brand" href="#" aria-label="VYNTRA home"><img src="/assets/vyntra-logo.png" alt="VYNTRA logo" onError={e => {e.currentTarget.style.display='none'}}/><span className="brand-fallback">VYNTRA<span>.</span></span></a>
-      <nav className={mobileOpen ? 'nav nav-open' : 'nav'}>
+      <a className="brand" href="#" aria-label="VYNTRA home">
+  <img
+    src="/VYNTRA%20Gradient%20Cart%20Logo.png"
+    alt="VYNTRA logo"
+    onError={e => { e.currentTarget.style.display = 'none'; }}
+  />
+  <span className="brand-fallback">VYNTRA<span>.</span></span>
+</a>
+            <nav className={mobileOpen ? 'nav nav-open' : 'nav'}>
         <a href="#discover" onClick={() => setMobileOpen(false)}>Discover</a><a href="#stores" onClick={() => setMobileOpen(false)}>Stores</a><a href="#about" onClick={() => setMobileOpen(false)}>Why VYNTRA</a>
       </nav>
       <div className="header-actions"><label className="searchbox"><Search size={17}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Find your next favourite..." aria-label="Search products"/></label>
