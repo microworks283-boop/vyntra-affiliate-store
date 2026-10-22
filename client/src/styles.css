@@ -11,3 +11,196 @@
 
 .auth-help{display:block;margin-top:7px;color:#817b92;font-size:10px;font-weight:500}
 .auth-error{margin-top:13px;padding:12px 13px;border:1px solid #fecaca;border-radius:9px;background:#fff1f2;color:#b42318;font-size:12px;line-height:1.5}.auth-error button{display:inline-block;margin-left:5px;padding:0;border:0;background:none;color:#8b1e13;text-decoration:underline;font-size:12px;font-weight:800;cursor:pointer}
+
+
+/* VYNTRA mobile marketplace refresh — preserves the existing lavender/white theme */
+.vyntra-header{padding-left:5%;padding-right:5%;height:78px;gap:12px}
+.vyntra-header .brand{min-width:90px;flex-shrink:0}
+.vyntra-header .brand img{width:58px;height:58px}
+.vyntra-header .nav{gap:20px}
+.vyntra-header .header-actions{gap:9px}
+.vyntra-header .searchbox{width:min(245px,24vw)}
+.vyntra-search-icon{display:none;border:0;background:#f3effb;color:#2a1b4d;border-radius:13px;width:48px;height:48px;align-items:center;justify-content:center}
+.vyntra-mobile-home{background:radial-gradient(ellipse at 80% 10%,#f0e7ff 0,transparent 35%),linear-gradient(135deg,#fff 0%,#fbf8ff 48%,#f2eaff 100%);padding-bottom:22px}
+.vyntra-hero{display:grid;grid-template-columns:1fr .92fr;gap:12px;align-items:center;padding:45px 6% 28px;min-height:460px;background:transparent}
+.vyntra-hero-copy{position:relative;z-index:2;min-width:0}
+.vyntra-hero-copy h1{font-size:clamp(36px,4.2vw,68px);line-height:1.01;margin:17px 0 15px;letter-spacing:-.065em}
+.vyntra-hero-copy h1 span{background:linear-gradient(100deg,#ff7900 0%,#f16b5b 45%,#6d2be5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vyntra-hero-copy>p{font-size:13px;line-height:1.65;color:#77758a;max-width:420px;margin-bottom:20px}
+.vyntra-hero-copy .primary-btn{padding:14px 18px;font-size:12px;display:inline-flex;gap:10px;align-items:center}
+.vyntra-hero-copy .text-link{display:flex;width:max-content;margin-top:14px;color:#6533bb;font-size:12px;font-weight:800;align-items:center;gap:7px}
+.vyntra-proof{display:flex;align-items:center;gap:0;margin-top:24px;flex-wrap:wrap}
+.vyntra-proof .proof-bubble{display:grid;place-items:center;width:29px;height:29px;border:2px solid #fff;border-radius:50%;background:#6932c4;color:#fff;font-size:10px;font-weight:800;margin-right:-6px}
+.vyntra-proof .proof-bubble:nth-child(2){background:#ff7900}.vyntra-proof .proof-bubble:nth-child(3){background:#21163f}
+.vyntra-proof strong{font-size:11px;color:#f16d26;margin-left:12px}
+.vyntra-proof small{font-size:10px;color:#55516a;margin-left:10px}
+.vyntra-hero-art{height:350px;position:relative;min-width:0;display:flex;align-items:center;justify-content:center}
+.vyntra-art-ring{position:absolute;width:100%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#ff8b16,#d54dba,#7334e6);right:-9%;top:4%;opacity:.95}
+.vyntra-hero-art>img{position:relative;width:94%;height:90%;object-fit:cover;object-position:center;border-radius:48% 48% 44% 44%;z-index:1;box-shadow:0 20px 55px #6d2be51b}
+.vyntra-fresh-card{position:absolute;z-index:3;top:0;right:-2%;display:flex;gap:10px;align-items:center;padding:12px 15px;border:1px solid #f0ebf7;background:#fff;border-radius:15px;box-shadow:0 10px 28px #28144712}
+.vyntra-fresh-card>span{display:grid;place-items:center;width:37px;height:37px;border-radius:11px;background:#fff1e6;color:#f27816}
+.vyntra-fresh-card b{display:block;font-size:12px;color:#21163f}.vyntra-fresh-card small{display:block;color:#8b8798;font-size:10px;margin-top:3px}
+.vyntra-good-edit{position:absolute;z-index:3;right:-1%;bottom:9%;width:82px;height:82px;border-radius:50%;display:grid;place-content:center;text-align:center;background:#21163f;color:#fff;font-size:10px;line-height:1.4;transform:rotate(9deg);box-shadow:0 8px 20px #21163f2c}
+.vyntra-good-edit b{color:#ff9a32}
+.vyntra-stores{padding:12px 4% 16px}
+.vyntra-section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px}
+.vyntra-section-title h2{font-size:22px;letter-spacing:-.04em;margin:0;color:#19162d}
+.vyntra-section-title>button{display:flex;align-items:center;gap:2px;border:0;background:transparent;color:#21163f;font-size:11px;font-weight:800}
+.vyntra-store-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.vyntra-store-card{min-width:0;display:flex;flex-direction:column;align-items:center;gap:5px;border:1px solid #f0ebf7;border-radius:15px;background:#fff;padding:11px 4px 9px;box-shadow:0 5px 16px #2b174108}
+.vyntra-store-logo{display:grid;place-items:center;width:47px;height:47px;border-radius:13px;background:#fff;font-size:31px;font-weight:900;line-height:1;box-shadow:0 3px 12px #21163f0e}
+.vyntra-store-logo.amz{color:#111}.vyntra-store-logo.flip{background:#ffdc13;color:#2878df}.vyntra-store-logo.myn{color:#ed268e}.vyntra-store-logo.mee{background:#581078;color:#ffcb16;border-radius:12px}.vyntra-store-logo.aj{background:#172c45;color:#fff;border-radius:50%}
+.vyntra-store-card>b{font-size:10px;color:#21163f;white-space:nowrap}
+.vyntra-store-card>small{font-size:8px;font-weight:800;color:#e62f7d;background:#ffe6f0;border-radius:6px;padding:4px 5px;white-space:nowrap}
+.vyntra-electronics-banner{margin:0 4% 20px;min-height:150px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;padding:22px 26px;border-radius:18px;background:linear-gradient(110deg,#211344 0%,#5423a0 54%,#7a34d9 100%);color:#fff;cursor:pointer}
+.vyntra-electronics-banner>div{position:relative;z-index:2;max-width:55%}
+.vyntra-electronics-banner h2{font-size:clamp(22px,3vw,34px);line-height:1.02;letter-spacing:-.04em;color:#fff;margin:0 0 7px}
+.vyntra-electronics-banner p{font-size:10px;line-height:1.45;color:#f4eefe;margin:0 0 12px}
+.vyntra-electronics-banner button{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:22px;background:#fff;color:#21163f;padding:9px 15px;font-size:10px;font-weight:800}
+.vyntra-electronics-banner img{position:absolute;right:0;bottom:0;width:53%;height:100%;object-fit:cover;object-position:center;mix-blend-mode:screen;opacity:.95;mask-image:linear-gradient(90deg,transparent 0%,#000 28%)}
+.vyntra-deals{padding:0 4% 28px!important}
+.vyntra-deals .filter-row{margin:12px 0}
+.vyntra-deals .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.vyntra-deals .product-card{border:1px solid #eee8f8;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 15px #2a17400a}
+.vyntra-deals .product-image{height:clamp(125px,20vw,230px);background:#f6f3fa}
+.vyntra-deals .product-image>img{object-fit:cover}
+.vyntra-deals .product-info{padding:10px 11px}
+.vyntra-deals .product-info h3{font-size:12px;line-height:1.3;margin:4px 0}
+.vyntra-deals .product-info p{font-size:10px;line-height:1.4;min-height:28px;margin:0 0 8px}
+.vyntra-deals .product-meta{font-size:9px}
+.vyntra-deals .product-tag{background:linear-gradient(90deg,#f72f91,#ff7844);color:#fff;border-radius:5px;font-size:9px;font-weight:800}
+.vyntra-deals .save-btn{background:#ffffffeb;color:#21163f}
+.vyntra-bottom-nav{display:none}
+@media(max-width:700px){
+  body{padding-bottom:72px}
+  .app-shell{overflow:clip}
+  .announcement{height:32px;font-size:10px;gap:7px;white-space:nowrap;overflow:hidden;padding:0 10px}
+  .announcement svg{flex-shrink:0}
+  .vyntra-header{height:72px;padding:0 5%;gap:8px;position:relative}
+  .vyntra-header .brand{min-width:76px;gap:0}
+  .vyntra-header .brand img{width:64px;height:55px}
+  .vyntra-header .nav{display:none}
+  .vyntra-header .nav.nav-open{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;padding:18px 6%;box-shadow:0 12px 20px #20113d18;z-index:30}
+  .vyntra-header .header-actions{gap:7px}
+  .vyntra-header .searchbox{display:none}
+  .vyntra-search-icon{display:flex;width:43px;height:43px;border-radius:12px}
+  .vyntra-header .auth-open-btn{height:43px;padding:0 12px;font-size:10px;border-radius:12px}
+  .vyntra-header .menu-btn{display:flex;width:43px;height:43px;padding:0;justify-content:center;border-radius:12px}
+  .vyntra-hero{grid-template-columns:minmax(0,1fr) minmax(0,.88fr);gap:3px;padding:30px 5% 22px;min-height:unset;align-items:center}
+  .vyntra-hero-copy .eyebrow{font-size:8px;letter-spacing:.12em;gap:6px;white-space:nowrap}
+  .vyntra-hero-copy .eyebrow-line{width:18px;flex-shrink:0}
+  .vyntra-hero-copy h1{font-size:clamp(32px,8.2vw,52px);line-height:1.02;margin:15px 0 12px}
+  .vyntra-hero-copy>p{font-size:10px;line-height:1.65;margin-bottom:15px}
+  .vyntra-hero-copy .primary-btn{padding:12px 12px;font-size:10px;gap:5px;border-radius:10px;white-space:nowrap}
+  .vyntra-hero-copy .primary-btn svg{width:14px}
+  .vyntra-hero-copy .text-link{font-size:10px;margin-top:11px}
+  .vyntra-proof{margin-top:18px;gap:0}
+  .vyntra-proof .proof-bubble{width:24px;height:24px;font-size:8px}
+  .vyntra-proof strong{font-size:9px;margin-left:9px}
+  .vyntra-proof small{font-size:8px;width:100%;margin:5px 0 0 0}
+  .vyntra-hero-art{height:340px;margin-left:-6px}
+  .vyntra-art-ring{width:110%;right:-8%;top:10%}
+  .vyntra-hero-art>img{width:100%;height:84%;object-position:55% center;border-radius:45% 45% 42% 42%}
+  .vyntra-fresh-card{right:-4%;top:0;padding:8px 9px;gap:7px;border-radius:12px}
+  .vyntra-fresh-card>span{width:29px;height:29px}
+  .vyntra-fresh-card>span svg{width:16px}
+  .vyntra-fresh-card b{font-size:9px}.vyntra-fresh-card small{font-size:8px}
+  .vyntra-good-edit{width:68px;height:68px;font-size:8px;right:-3%;bottom:10%}
+  .vyntra-stores{padding:13px 4% 16px;background:linear-gradient(180deg,#f8f3ff,#fff9ff)}
+  .vyntra-section-title h2{font-size:18px}
+  .vyntra-section-title{margin-bottom:10px}
+  .vyntra-store-row{gap:6px}
+  .vyntra-store-card{padding:8px 2px 7px;gap:5px;border-radius:12px}
+  .vyntra-store-logo{width:37px;height:37px;font-size:25px;border-radius:10px}
+  .vyntra-store-card>b{font-size:8px}
+  .vyntra-store-card>small{font-size:7px;padding:4px 3px}
+  .vyntra-electronics-banner{margin:0 4% 18px;min-height:132px;padding:17px 17px;border-radius:15px}
+  .vyntra-electronics-banner>div{max-width:58%}
+  .vyntra-electronics-banner h2{font-size:22px}
+  .vyntra-electronics-banner p{font-size:9px}
+  .vyntra-electronics-banner button{font-size:9px;padding:8px 12px}
+  .vyntra-electronics-banner img{width:52%}
+  .vyntra-deals .product-image{height:clamp(120px,35vw,190px)}
+  .vyntra-deals .product-info{padding:8px}
+  .vyntra-deals .product-info h3{font-size:10px}
+  .vyntra-deals .product-info p{font-size:9px;min-height:32px}
+  .vyntra-deals .price-row{align-items:flex-start}
+  .vyntra-deals .price-row strong{font-size:12px}
+  .vyntra-deals .price-row del{font-size:9px}
+  .vyntra-deals .round-arrow{display:none}
+  .vyntra-deals .quick-view{font-size:8px;padding:8px 4px}
+  .vyntra-deals .affiliate-note{font-size:9px}
+  .vyntra-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:repeat(5,1fr);padding:7px 2px calc(7px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #eee7f8;box-shadow:0 -5px 22px #2513460a}
+  .vyntra-bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:0;background:transparent;color:#21163f;font-size:9px;font-weight:600;padding:3px 0}
+  .vyntra-bottom-nav button svg{width:21px;height:21px;stroke-width:1.8}
+  .vyntra-bottom-nav button>span{font-size:26px;line-height:21px}
+  .vyntra-bottom-nav button.active{color:#f45b88;border-top:2px solid #f45b88}
+  .vyntra-bottom-nav button.active>span{color:#f45b88}
+  .footer{padding-bottom:20px}
+}
+@media(max-width:390px){
+ .vyntra-hero{padding-left:4%;padding-right:4%;grid-template-columns:minmax(0,1fr) minmax(0,.82fr)}
+ .vyntra-hero-copy h1{font-size:31px}
+ .vyntra-hero-art{height:310px}
+ .vyntra-proof small{font-size:7px}
+ .vyntra-store-card>small{font-size:6px}
+ .vyntra-header .auth-open-btn{font-size:9px;padding:0 8px}
+}
+
+/* Dedicated bottom-navigation pages */
+.vyntra-inner-page{min-height:calc(100vh - 180px);padding:28px 4% 36px;background:radial-gradient(ellipse at 80% 0%,#f0e7ff 0,transparent 38%),linear-gradient(135deg,#fff 0%,#fbf8ff 48%,#f2eaff 100%)}
+.inner-page-section{max-width:1120px;margin:0 auto}
+.inner-page-heading{position:relative;margin:0 0 24px}
+.inner-page-heading>p{margin:0 0 8px;color:#7543c8;font-size:10px;font-weight:900;letter-spacing:.16em}
+.inner-page-heading h1{margin:0;color:#19162d;font-size:clamp(30px,6vw,46px);line-height:1.08;letter-spacing:-.05em}
+.inner-page-heading h1 span{background:linear-gradient(100deg,#ff7900,#d84caa,#7334e6);background-clip:text;-webkit-background-clip:text;color:transparent}
+.inner-page-heading>small{display:block;color:#777187;font-size:13px;line-height:1.6;margin-top:10px}
+.inner-page-heading.compact{display:flex;align-items:center;justify-content:space-between;margin:28px 0 14px}
+.inner-page-heading.compact h2{margin:0;font-size:20px;color:#21163f}
+.category-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.category-page-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px;padding:18px 14px;border:1px solid #eee7f8;border-radius:18px;background:#fff;box-shadow:0 8px 22px #25134608;color:#21163f}
+.category-page-card>span{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,#fff0e5,#f0e6ff);font-size:27px}
+.category-page-card b{font-size:14px}.category-page-card small{font-size:11px;color:#898397}
+.stores-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stores-page-grid .vyntra-store-card{padding:18px 8px;border-radius:18px}
+.stores-page-grid .vyntra-store-logo{width:56px;height:56px;font-size:34px}
+.stores-page-grid .vyntra-store-card>b{font-size:13px}.stores-page-grid .vyntra-store-card>small{font-size:10px}
+.inner-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.inner-product-grid .product-card{overflow:hidden;border:1px solid #eee7f8;border-radius:16px;background:#fff}
+.inner-product-grid .product-image{height:clamp(140px,30vw,250px)}
+.inner-product-grid .product-info{padding:12px}
+.inner-product-grid .product-info h3{font-size:13px}
+.inner-product-grid .product-info p{font-size:11px}
+.reset-filter{border:1px solid #e9def8;border-radius:20px;padding:7px 12px;background:#fff;color:#6d2be5;font-size:11px;font-weight:800}
+.wishlist-empty{display:flex;flex-direction:column;align-items:center;text-align:center;padding:42px 18px;border:1px dashed #d9c8f3;border-radius:22px;background:#ffffffa8;color:#6d2be5}
+.wishlist-empty h2{margin:16px 0 6px;color:#21163f;font-size:22px}.wishlist-empty p{margin:0 0 18px;color:#817b92;font-size:13px}
+.account-page-section{margin-bottom:4px}
+.auth-page-wrap{position:relative;z-index:1;display:block;padding:0 4% 34px;background:radial-gradient(ellipse at 80% 0%,#f0e7ff 0,transparent 38%),linear-gradient(135deg,#fff 0%,#fbf8ff 48%,#f2eaff 100%)}
+.auth-page-wrap .auth-card{width:min(100%,560px);margin:0 auto;padding:26px;border-radius:22px;box-shadow:0 10px 35px #21163f0d}
+.auth-page-wrap .auth-close{display:none}
+body:has(.vyntra-inner-page) .footer{display:none}
+@media(max-width:700px){
+ .vyntra-inner-page{min-height:calc(100vh - 180px);padding:24px 4% 30px}
+ .inner-page-heading{margin-bottom:20px}
+ .inner-page-heading h1{font-size:34px}
+ .inner-page-heading>small{font-size:12px}
+ .category-page-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .category-page-card{padding:15px 12px;border-radius:15px}
+ .category-page-card>span{width:48px;height:48px;font-size:24px}
+ .stores-page-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .stores-page-grid .vyntra-store-card{padding:15px 6px}
+ .inner-product-grid{gap:9px}
+ .inner-product-grid .product-image{height:clamp(125px,37vw,190px)}
+ .inner-product-grid .product-info{padding:9px}
+ .inner-product-grid .product-info h3{font-size:11px}
+ .inner-product-grid .product-info p{font-size:10px}
+ .auth-page-wrap{padding:0 4% 28px}
+ .auth-page-wrap .auth-card{padding:22px 18px}
+}
+
+/* Private VYNTRA product-admin workspace */
+.admin-shell{min-height:100vh;background:radial-gradient(ellipse at 90% 0%,#efe4ff 0,transparent 36%),linear-gradient(135deg,#fff 0%,#fbf8ff 48%,#f2eaff 100%);color:#21163f;padding-bottom:40px}
+.admin-header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 max(5%,calc((100% - 1120px)/2));background:#fff;border-bottom:1px solid #eee7f8;box-shadow:0 5px 22px #25134608}
+.admin-brand{display:flex;align-items:center;gap:12px}.admin-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#ff7900,#7134e7);color:#fff;font-weight:950;font-size:25px}.admin-brand b{display:block;font-size:18px;letter-spacing:.04em}.admin-brand small{display:block;color:#866bb5;font-size:9px;font-weight:900;letter-spacing:.17em;margin-top:3px}
+.admin-login-wrap{padding:55px 18px;display:grid;place-items:start center}.admin-login-card{width:min(100%,460px);padding:30px;background:#fff;border:1px solid #eee5fa;border-radius:24px;box-shadow:0 18px 55px #2a12400d}.admin-eyebrow{color:#7b43c9;font-size:10px;letter-spacing:.16em;font-weight:900;margin:0 0 10px}.admin-login-card h1,.admin-page-title h1{font-size:clamp(28px,5vw,40px);line-height:1.1;letter-spacing:-.04em;margin:0;color:#19162d}.admin-login-card>p:not(.admin-eyebrow){font-size:13px;color:#817b92;line-height:1.6;margin:12px 0 22px}.admin-login-card label,.admin-product-form label{display:flex;flex-direction:column;gap:7px;color:#3c3153;font-size:12px;font-weight:800;margin-bottom:15px}.admin-login-card input,.admin-product-form input,.admin-product-form select,.admin-product-form textarea{width:100%;min-width:0;padding:12px 13px;border:1px solid #e6ddef;border-radius:11px;background:#fdfcff;color:#21163f;font:inherit;font-weight:500;outline:none}.admin-login-card input:focus,.admin-product-form input:focus,.admin-product-form select:focus,.admin-product-form textarea:focus{border-color:#9c6be0;box-shadow:0 0 0 3px #7b43c914}.admin-primary,.admin-secondary,.admin-danger{border:0;border-radius:11px;padding:11px 15px;font-size:12px;font-weight:850;cursor:pointer}.admin-primary{background:linear-gradient(100deg,#ff7900,#ed5c51);color:white;box-shadow:0 8px 18px #ff790025}.admin-primary:disabled{opacity:.65}.admin-login-card>.admin-primary{width:100%;padding:14px}.admin-secondary{background:#f2ebfc;color:#6434ad;border:1px solid #e6daf8}.admin-danger{background:#fff0f0;color:#b42335;border:1px solid #ffd5d9}.admin-hint{display:block;color:#8b839b;font-size:10px;line-height:1.6;margin-top:15px}.admin-error{padding:11px 13px;margin:12px 0;background:#fff0f0;border:1px solid #ffd4d4;border-radius:10px;color:#a32c39;font-size:12px;line-height:1.5}.admin-content{max-width:1120px;margin:0 auto;padding:32px 18px}.admin-page-title{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}.admin-page-title>div:first-child>p:last-child{max-width:650px;color:#817b92;font-size:13px;line-height:1.6}.admin-count{display:grid;place-items:center;min-width:84px;height:84px;border:1px solid #eadff8;border-radius:20px;background:#fff}.admin-count b{font-size:26px;color:#6d2be5}.admin-count span{font-size:10px;color:#817b92}.admin-product-form{padding:22px;background:#fff;border:1px solid #eee5fa;border-radius:20px;box-shadow:0 10px 32px #25134608}.admin-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.admin-wide{grid-column:1/-1}.admin-form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}.admin-products{margin-top:32px}.admin-list-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.admin-list-heading h2{margin:0;font-size:22px}.admin-product-row{display:flex;align-items:center;gap:14px;padding:13px;margin-bottom:10px;border:1px solid #eee5fa;border-radius:15px;background:#fff}.admin-product-row>img{width:64px;height:64px;object-fit:cover;border-radius:11px;background:#f5f0fc}.admin-product-details{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}.admin-product-details b{font-size:13px}.admin-product-details span,.admin-product-details a{font-size:11px;color:#817b92;overflow-wrap:anywhere}.admin-product-details a{color:#7134c9;text-decoration:none}.admin-row-actions{display:flex;gap:7px}.admin-empty{padding:24px;text-align:center;color:#817b92;background:#fff;border-radius:14px}.admin-storage-note{margin-top:22px;padding:13px 15px;border:1px solid #f1dfb2;border-radius:12px;background:#fff9e8;color:#73551a;font-size:11px;line-height:1.6}
+@media(max-width:620px){.admin-header{height:65px;padding:0 16px}.admin-login-wrap{padding:28px 14px}.admin-login-card{padding:23px 18px}.admin-content{padding:24px 13px}.admin-page-title{align-items:flex-start}.admin-count{min-width:68px;height:68px;border-radius:16px}.admin-form-grid{grid-template-columns:1fr}.admin-wide{grid-column:auto}.admin-product-form{padding:16px}.admin-product-row{align-items:flex-start;gap:9px;padding:10px}.admin-product-row>img{width:48px;height:48px}.admin-row-actions{flex-direction:column}.admin-row-actions button{padding:8px}.admin-product-details b{font-size:11px}.admin-product-details span,.admin-product-details a{font-size:10px}}
