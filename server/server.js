@@ -23,7 +23,7 @@ const sessions = new Map();
 const otpExpiryMs = 5 * 60 * 1000;
 const emailConfigured = Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
 const transporter = emailConfigured ? nodemailer.createTransport({
-  host: process.env.SMTP_HOST, port: Number(process.env.SMTP_PORT || 587),
+  host: process.env.SMTP_HOST, port: Number(process.env.SMTP_PORT || 465),
   secure: String(process.env.SMTP_SECURE || 'false') === 'true',
   auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
 }) : null;
