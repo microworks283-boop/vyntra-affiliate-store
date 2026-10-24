@@ -183,7 +183,10 @@ function App() {
     {(authOpen || activePage === 'account') && <div className={activePage === 'account' ? 'auth-page-wrap' : 'auth-overlay'} onMouseDown={e => { if (e.target === e.currentTarget && activePage !== 'account') setAuthOpen(false); }}>
       <section className="auth-card" role="dialog" aria-modal="true" aria-label="VYNTRA login and signup">
         {activePage !== 'account' && <button className="auth-close" onClick={() => setAuthOpen(false)} aria-label="Close">×</button>}
-        <img src="/VYNTRA Gradient Cart Logo.png" alt="VYNTRA" /><img src="/assets/vyntra-logo.png" alt="VYNTRA"/><span>VYNTRA</span></div>
+        <div className="auth-logo">
+  <img src="/VYNTRA Gradient Cart Logo.png" alt="VYNTRA" />
+  <span>VYNTRA</span>
+</div>
         <div className="eyebrow auth-eyebrow">ALL YOUR FAVOURITE STORES, ONE PLACE</div>
         <h2>{authUser ? 'You’re signed in' : otpSent ? 'Check your inbox' : authMode === 'signup' ? 'Create your account' : 'Welcome back'}</h2>
         <p className="auth-subtitle">{authUser ? `Signed in as ${authUser.email}` : otpSent ? `Enter the 6-digit verification code sent to ${authEmail}. It expires in 5 minutes.` : authMode === 'signup' ? 'Create a VYNTRA account. We’ll verify your email before your account is activated.' : 'Log in with your email address and password.'}</p>
