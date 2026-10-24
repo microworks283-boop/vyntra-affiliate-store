@@ -7,6 +7,9 @@ import bcrypt from 'bcryptjs';
 import nodemailer from 'nodemailer';
 import { fileURLToPath } from 'node:url';
 import 'dotenv/config';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -21,7 +24,7 @@ const writeUsers = users => fs.writeFileSync(usersPath, JSON.stringify(users, nu
 const otpChallenges = new Map();
 const sessions = new Map();
 const otpExpiryMs = 5 * 60 * 1000;
-const emailConfigured = Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
+const emailConfigured = Boolean(process.env.RESEND_API_KEY);
 const transporter = emailConfigured ? nodemailer.createTransport({
   host: process.env.SMTP_HOST, port: Number(process.env.SMTP_PORT || 587),
   secure: String(process.env.SMTP_SECURE || 'false') === 'true',
@@ -44,11 +47,11 @@ app.post('/api/auth/request-otp', async (req, res) => {
     if (password.length < 8) return res.status(400).json({ error: 'Password must contain at least 8 characters.' });
     const users = readUsers();
     if (users.some(u => u.email === email)) return res.status(409).json({ error: 'An account already exists. Please log in.' });
-    if (!transporter) return res.status(503).json({ error: 'Email OTP is not configured. Add SMTP settings to server/.env and restart the API.' });
+    if (!process.env.RESEND_API_KEY) {   return res.status(503).json({     error: 'Email OTP is not configured. Please configure the Resend API key.'   }); }
     const passwordHash = await bcrypt.hash(password, 12);
     const otp = String(crypto.randomInt(0, 1000000)).padStart(6, '0');
     otpChallenges.set(email, { otpHash: crypto.createHash('sha256').update(otp).digest('hex'), name, passwordHash, mode: 'signup', expiresAt: Date.now() + otpExpiryMs, attempts: 0 });
-    await transporter.sendMail({
+    const { data, error } = await resend.emails.send({   from: 'VYNTRA <onboarding@resend.dev>',   to: [email],   subject: 'Verify your VYNTRA account',   text: `Your VYNTRA email verification code is ${otp}. It expires in 5 minutes. If you did not request this, ignore this email.`,   html: `     <div style="font-family:Arial,sans-serif;max-width:520px;margin:auto;padding:28px;color:#21163f">       <h1 style="color:#6d2be5">VYNTRA</h1>       <h2>Verify your email</h2>       <p>Enter this one-time code to finish creating your VYNTRA account:</p>       <div style="font-size:32px;font-weight:bold;letter-spacing:8px;background:#f4efff;padding:18px;text-align:center;border-radius:12px">         ${otp}       </div>       <p>This code expires in <b>5 minutes</b>. Never share it with anyone.</p>     </div>   ` });  if (error) {   otpChallenges.delete(email);   console.error('Resend OTP email failed:', error);    return res.status(502).json({     error: 'Could not send the verification email. Please try again.'   }); }
       from: process.env.FROM_EMAIL || process.env.SMTP_USER, to: email,
       subject: 'Verify your VYNTRA account',
       text: `Your VYNTRA email verification code is ${otp}. It expires in 5 minutes. If you did not request this, ignore this email.`,
