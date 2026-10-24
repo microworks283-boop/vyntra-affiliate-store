@@ -124,7 +124,7 @@ function App() {
   return <div className="app-shell">
     <div className="announcement"><Sparkles size={14}/> Your next great find is closer than you think <span className="announce-dot">✦</span> Curated across stores</div>
     <header className="header vyntra-header">
-      <a className="brand" href="#" aria-label="VYNTRA home"><img src="/assets/vyntra-logo.png" alt="VYNTRA logo"/><span className="brand-fallback">VYNTRA<span>.</span></span></a>
+      <a className="brand" href="#" aria-label="VYNTRA home"><img src="/assets/VYNTRA Gradient Cart Logo.png alt="VYNTRA logo"/><span className="brand-fallback">VYNTRA<span>.</span></span></a>
       <nav className={mobileOpen ? 'nav nav-open' : 'nav'}>
         <a href="#discover" onClick={() => setMobileOpen(false)}>Discover</a><a href="#stores" onClick={() => setMobileOpen(false)}>Stores</a>
       </nav>
